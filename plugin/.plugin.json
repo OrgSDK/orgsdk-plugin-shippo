@@ -1,0 +1,28 @@
+{
+	"$schema": "https://orgsdk.ai/schemas/plugin-manifest.v1.json",
+	"name": "shippo",
+	"version": "0.1.1",
+	"description": "Read-only Shippo evidence for ecommerce late-order and return reviews.",
+	"entry": "index.ts",
+	"auth": {
+		"type": "token",
+		"provider": "shippo",
+		"label": "Shippo credentials",
+		"hint": "Inject secret_apiKey. Uses ShippoToken authentication."
+	},
+	"marketplace": {
+		"displayName": "Shippo",
+		"category": "Business",
+		"tagline": "Read evidence for late orders and return recommendations.",
+		"tags": ["ecommerce", "shipping", "readonly", "exceptions"],
+		"useCases": [
+			"Correlate order, shipment and support references",
+			"Prepare evidence for a human-reviewed recommendation"
+		],
+		"permissionsSummary": "Read operations only. No purchases, refunds, messages, updates or credential mutation. Account credentials may independently have broader rights.",
+		"links": {
+			"homepage": "https://orgsdk.ai",
+			"docs": "https://docs.goshippo.com/api-reference/overview"
+		}
+	}
+}
